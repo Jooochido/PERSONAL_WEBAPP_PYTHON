@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Listado de Tareas</title>
+</head>
+<body>
+    <h1>Listado de Tareas</h1>
+
+    <ul>
+        {% for tarea in tareas %}
+            <li>{{ tarea }}</li>
+        {% endfor %}
+    </ul>
+
+    <form method="post" action="/agregar">
+        <label for="nueva_tarea">Nueva Tarea</label>
+        <input type="text" id="nueva_tarea" name="nueva_tarea" placeholder="Nueva tarea" autofocus required>
+        <button type="submit">Agregar</button>
+    </form>
+</body>
+</html>
